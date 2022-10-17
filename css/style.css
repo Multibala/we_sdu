@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.7;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+}
+::selection {
+  color: #fff;
+  background: #082673;
+}
+::-moz-selection {
+  color: #fff;
+  background: #082673;
+}
+/* Sections Header
+  --------------------------------*/
+.section-header {
+  margin-bottom: 30px;
+}
+
+.section-header h2 {
+  color: #082673;
+  text-transform: uppercase;
+  font-weight: 700;
+  position: relative;
+}
+.section-header p {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+}
+/* Team
+---------------------------------------------------*/
+.team-member {
+  margin-bottom: 15px;
+}
+.member-img {
+  overflow: hidden;
+  padding: 5px;
+  position: relative;
+}
+.member-img:before {
+  content: "";
+  width: 80px;
+  height: 80px;
+  background: #082673;
+  float: right;
+  position: absolute;
+  z-index: -1;
+  top: -5px;
+  right: 1px;
+}
+.member-img:after {
+  content: "";
+  width: 80px;
+  height: 80px;
+  background: #082673;
+  float: right;
+  position: absolute;
+  z-index: -1;
+  bottom: -5px;
+  left: 1px;
+}
+.team-member .member-img img {
+  max-width: 295px;
+  margin: 0 auto;
+}
+.team-member h4 {
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 32px;
+  margin: 10px 0 0;
+  text-align: center;
+}
+.team-member .pos {
+  display: block;
+  margin: 0;
+  text-align: center;
+}
+.team-member .contact a {
+  padding: 0 8px;
+}
+.team-socials {
+  position: relative;
+  bottom: 120px;
+  left: 0px;
+  right: 0px;
+  opacity: 0;
+  text-align: center;
+}
+.team-socials a {
+  padding: 7px 0;
+  margin: 2px;
+  background: white;
+  color: #9e2629;
+}
+.team-socials a:hover {
+  color: #082673;
+}
+.team-member {
+  padding-top: 5px;
+}
+.team-member:hover .team-socials {
+  opacity: 1;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
+.team-socials i {
+  width: 35px;
+  height: 35px;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .team-member .member-img img {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-socials a {
+    background: white;
+    padding: 1px 0;
+    margin: 2px;
+  }
+  .team-socials i {
+    width: 19px;
+    height: 19px;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    font-size: 16px;
+  }
+}
+/* Contact Section
+--------------------------------*/
+#contact {
+  padding: 30px 0;
+}
+
+#contact .contact-info {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#contact .contact-info i {
+  font-size: 48px;
+  display: inline-block;
+  margin-bottom: 10px;
+  color: #9e2629;
+}
+
+#contact .contact-info address,
+#contact .contact-info p {
+  margin-bottom: 0;
+  color: #000;
+}
+
+#contact .contact-info h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #999;
+}
+
+#contact .contact-info a {
+  color: #000;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+#contact .contact-info a:hover {
+  color: #9e2629;
+  outline: none;
+  text-decoration: none;
+}
+
+#contact .contact-address,
+#contact .contact-phone,
+#contact .contact-email {
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  #contact .contact-address,
+  #contact .contact-phone,
+  #contact .contact-email {
+    padding: 20px 0;
+  }
+}
+
+@media (min-width: 768px) {
+  #contact .contact-phone {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+  }
+}
+/*--------------------------------------------------------------
+  # Footer
+  --------------------------------------------------------------*/
+#footer {
+  background: #082673;
+  padding: 0 0 30px 0;
+  font-size: 14px;
+}
+
+#footer .copyright {
+  color: #fff;
+  text-align: center;
+  padding-top: 30px;
+}
