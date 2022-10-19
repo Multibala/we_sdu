@@ -40,6 +40,126 @@ h6 {
   margin: 0;
   font-size: 16px;
 }
+
+.title { 
+  color: #082673; 
+  text-transform: uppercase; 
+  font-weight: 700; 
+  position: relative; 
+} 
+.text { 
+  font-size: 20px; 
+  white-space: pre-line; 
+} 
+
+/* HEADER */ 
+.header { 
+  width: 100%; 
+  padding: 5px 0; 
+} 
+.header__container { 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+} 
+.header__logo img { 
+  width: 100px; 
+  height: 95px; 
+} 
+
+.header__menu { 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+} 
+.header__menu-link { 
+  font-weight: 400; 
+  font-size: 24px; 
+  line-height: 19px; 
+  color: black; 
+  text-decoration: none; 
+  margin-right: 55px; 
+} 
+.header__menu-link:active { 
+  color: #082673; 
+} 
+
+/* MAIN-BLOCK */ 
+.main { 
+  position: relative; 
+  width: 100%; 
+  height: 450px; 
+  background: url('../images/main-photo.jpg'); 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover; 
+} 
+.main__background { 
+  width: 100%; 
+  height: 100%; 
+  background-color: #030c00; 
+  opacity: 0.5; 
+} 
+.main__container { 
+  position: absolute; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  display: flex; 
+  justify-content: center; 
+  text-align: center; 
+  color: white; 
+} 
+.main__title { 
+  font-size: 60px; 
+} 
+.main__text { 
+  font-size: 24px; 
+} 
+
+/* ABOUT-US */ 
+.about { 
+  padding: 30px 0; 
+} 
+.about__block { 
+  display: flex; 
+  justify-content: space-between; 
+} 
+.about__img img { 
+  width: 500px; 
+  height: 300px; 
+} 
+.about__us { 
+  text-align: center; 
+} 
+
+/* UPCOMING EVENTS */ 
+.upcoming__content { 
+  text-align: end; 
+} 
+.upcoming__content img { 
+  max-width: 100%; 
+} 
+.upcoming__block { 
+  display: grid; 
+  row-gap: 10px; 
+} 
+.upcoming__block-1 { 
+  display: grid; 
+  grid-gap: 10px; 
+  grid-template-columns: 1fr 1fr; 
+} 
+.upcoming__block-2 { 
+  display: grid; 
+  grid-gap: 10px; 
+  grid-template-columns: 1fr 1fr 1fr; 
+} 
+.upcoming__btn { 
+  background: #082673; 
+  color: #fff; 
+  margin: 15px 0; 
+}
+
 /* Team
 ---------------------------------------------------*/
 .team-member {
