@@ -4,20 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css" >
+    <link rel="stylesheet" href="css/mobile.css">
     <title>Document</title>
-
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-
-    <script
-      src="https://kit.fontawesome.com/498ec9eae7.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/498ec9eae7.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <!-- HEADER -->
@@ -28,7 +19,7 @@
         </a>
         <nav class="header__menu">
           <a href="index.html" class="header__menu-link">Menu</a>
-          <a href="#" class="header__menu-link">Events</a>
+          <a href="allEvents.html" class="header__menu-link">Events</a>
         </nav>
       </div>
     </header>
@@ -67,23 +58,83 @@
 
     <!-- UPCOMING EVENTS -->
     <div class="upcoming container">
-      <h2 class="upcoming__title title">Upcoming events</h2>
-      <div class="upcoming__content">
-        <div class="upcoming__block">
-          <div class="upcoming__block-1">
-            <img src="./images/main-photo.jpg" />
-            <img src="./images/main-photo.jpg" />
+      <h2 class="title">Upcoming events</h2>
+      <div class="row"> 
+        <!-- PORTFOLIO IMAGE 1 -->
+        <div class="col-md-4 ">
+          <div class="grid overlay">
+            <figure> <img class="img-responsive" src="images/main-photo.jpg" alt="">
+              <figcaption>
+                <h5>Blind pair</h5>
+                <a data-toggle="modal" href="eventDetails.html" class="btn btn-default">More Details</a> </figcaption>
+            </figure>
           </div>
-          <div class="upcoming__block-2">
-            <img src="./images/main-photo.jpg" />
-            <img src="./images/main-photo.jpg" />
-            <img src="./images/main-photo.jpg" />
+        </div> 
+        
+        <!-- PORTFOLIO IMAGE 2 -->
+        <div class="col-md-4">
+          <div class="grid overlay">
+            <figure> <img class="img-responsive" src="images/main-photo.jpg" alt="">
+              <figcaption>
+                <h5>Blind pair</h5>
+                <a data-toggle="modal" href="eventDetails.html" class="btn btn-default">More Details</a> </figcaption>
+            </figure>
           </div>
         </div>
-        <button class="upcoming__btn btn">All events</button>
+        
+        <!-- PORTFOLIO IMAGE 3 -->
+        <div class="col-md-4">
+          <div class="grid overlay">
+            <figure> <img class="img-responsive" src="images/main-photo.jpg" alt="">
+              <figcaption>
+                <h5>Blind pair</h5>
+                <a data-toggle="modal" href="eventDetails.html" class="btn btn-default">More Details</a> </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+      
+      <!-- PORTFOLIO IMAGE 4 -->
+      <div class="row">
+        <div class="col-md-4 ">
+          <div class="grid overlay">
+            <figure> <img class="img-responsive" src="images/main-photo.jpg" alt="">
+              <figcaption>
+                <h5>Blind pair</h5>
+                <a data-toggle="modal" href="eventDetails.html" class="btn btn-default">More Details</a> </figcaption>
+            </figure>
+          </div>
+        </div>
+        
+        <!-- PORTFOLIO IMAGE 5 -->
+        <div class="col-md-4">
+          <div class="grid overlay">
+            <figure> <img class="img-responsive" src="images/main-photo.jpg" alt="">
+              <figcaption>
+                <h5>Blind pair</h5>
+                <a data-toggle="modal" href="eventDetails.html" class="btn btn-default">More Details</a> </figcaption>
+            </figure>
+          </div>
+        </div>
+        
+        <!-- PORTFOLIO IMAGE 6 -->
+        <div class="col-md-4">
+          <div class="grid overlay">
+            <figure> <img class="img-responsive" src="images/main-photo.jpg" alt="">
+              <figcaption>
+                <h5>Blind pair</h5>
+                <a data-toggle="modal" href="eventDetails.html" class="btn btn-default">More Details</a> </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+      <div class="upcoming__all">
+        <a href="allEvents.html" class="upcoming__btn btn">All events</a>
       </div>
     </div>
 
+    
+    <!-- OUR TEAM -->
     <section id="team" class="page-section">
       <div class="container">
         <div class="section-header">
@@ -184,7 +235,8 @@
           </div>
         </div>
       </div>
-      <!--/.container-->
+
+      
     </section>
     <section id="contact">
       <div class="container" data-aos="fade-up">

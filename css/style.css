@@ -111,7 +111,7 @@ h6 {
 
 /* ABOUT-US */
 .about {
-  padding: 30px 0;
+  padding: 70px 0;
 }
 .about__block {
   display: flex;
@@ -126,25 +126,55 @@ h6 {
 }
 
 /* UPCOMING EVENTS */
-.upcoming__content {
+.upcoming {
+  padding: 0 0 70px;
+}
+.grid figure {
+	margin: 0;
+	position: relative;
+	border: 1px solid #eee;
+}
+.grid figure img {
+	width: 100%;
+	display: block;
+	position: relative;
+}
+.grid figcaption {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 20px;
+	color: #fff;
+}
+.grid figcaption h5 {
+	margin: 0;
+	padding-top: 0px;
+	padding-left: 20px;
+	padding-bottom: 5px;
+	color: #fff;
+	font-weight: 700;
+	text-align: left;
+	letter-spacing: 1px;
+	font-size:24px;
+}
+
+.overlay figcaption {
+	height: 100%;
+	width: 100%;
+	top: auto;
+	bottom: 0;
+}
+.overlay figcaption a {
+position: absolute;
+bottom: 10px;
+right: 30px;
+background: #9e2629;
+color: #fff;
+border-radius: 0px;
+padding: 6px 15px;
+}
+.upcoming__all {
   text-align: end;
-}
-.upcoming__content img {
-  max-width: 100%;
-}
-.upcoming__block {
-  display: grid;
-  row-gap: 10px;
-}
-.upcoming__block-1 {
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: 1fr 1fr;
-}
-.upcoming__block-2 {
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: 1fr 1fr 1fr;
 }
 .upcoming__btn {
   background: #082673;
@@ -240,31 +270,10 @@ h6 {
   font-size: 18px;
 }
 
-@media (max-width: 768px) {
-  .team-member .member-img img {
-    max-width: 100%;
-  }
-}
-
-@media (max-width: 480px) {
-  .team-socials a {
-    background: white;
-    padding: 1px 0;
-    margin: 2px;
-  }
-  .team-socials i {
-    width: 19px;
-    height: 19px;
-    position: relative;
-    display: inline-block;
-    text-align: center;
-    font-size: 16px;
-  }
-}
 /* Contact Section
 --------------------------------*/
 #contact {
-  padding: 30px 0;
+  padding: 50px 0;
 }
 
 #contact .contact-info {
@@ -311,20 +320,6 @@ h6 {
   margin-bottom: 20px;
 }
 
-@media (min-width: 768px) {
-  #contact .contact-address,
-  #contact .contact-phone,
-  #contact .contact-email {
-    padding: 20px 0;
-  }
-}
-
-@media (min-width: 768px) {
-  #contact .contact-phone {
-    border-left: 1px solid #ddd;
-    border-right: 1px solid #ddd;
-  }
-}
 /* Footer
   --------------------------------------------------------------*/
 #footer {
@@ -456,14 +451,78 @@ h6 {
   top: 2px;
 }
 
-@media (max-width: 768px) {
-  #event-poster .event-name h2 {
-    font-size: 36px;
-  }
-  #event-details {
-    flex-direction: column;
-  }
-  .details-item:not(:last-child) {
-    padding-bottom: 30px;
-  }
+/* All Events page */
+.events {
+  padding: 50px 0;
+}
+.events__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+}
+.product-img {
+  width: 327px;
+}
+.product-img img {
+  width: 327px;
+  object-fit: cover;
+  border-radius: 10px 0 0 10px;
+}
+.product-desc {
+  padding-right: 30px;
+  padding-left: 30px;
+  background-color: transparent;
+}
+.product-text h1 {
+  font-size: 34px;
+  line-height: 42px;
+  margin-bottom: 0;
+}
+.product-text h1,
+.product-price-btn p {
+  font-family: 'Bentham', serif;
+}
+.product-text h2 {
+  font-size: 17px;
+  line-height: 25px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-top: 0;
+}
+.product-text p {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  line-height: 24px;
+}
+.product-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.product-price p {
+  font-family: 'Trocchi', serif;
+  font-size: 28px;
+  margin: 0;
+}
+.product-price button {
+  padding: 10px 30px;
+  border-radius: 6px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  background-color: transparent;
+  cursor: pointer;
+  border: 1px solid #9e2629;
+  transition: .5s;
+}
+.product-price button:hover {
+  background-color: #9e2629;
+  color: #fff;
 }
