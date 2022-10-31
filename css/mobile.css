@@ -1,70 +1,59 @@
+@media (max-width: 768px) {
+  /* About Us */
+  #about .content h2 {
+    padding-top: 16px;
+  }
+}
 /* Team
 ---------------------------------------------------*/
 @media (max-width: 768px) {
-    .team-member .member-img img {
-      max-width: 100%;
-    }
-}
-  
-@media (max-width: 480px) {
-    .team-socials a {
-        background: white;
-        padding: 1px 0;
-        margin: 2px;
-    }
-    .team-socials i {
-        width: 19px;
-        height: 19px;
-        position: relative;
-        display: inline-block;
-        text-align: center;
-        font-size: 16px;
-    }
+  .team-member .member-img img {
+    max-width: 100%;
+  }
 }
 
-/* Contact Section
---------------------------------*/
-@media (min-width: 768px) {
-    #contact .contact-address,
-    #contact .contact-phone,
-    #contact .contact-email {
-        padding: 20px 0;
-    }
-}
-  
-@media (min-width: 768px) {
-    #contact .contact-phone {
-        border-left: 1px solid #ddd;
-        border-right: 1px solid #ddd;
-    }
+@media (max-width: 480px) {
+  .team-socials a {
+    background: white;
+    padding: 1px 0;
+    margin: 2px;
+  }
+  .team-socials i {
+    width: 19px;
+    height: 19px;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    font-size: 16px;
+  }
 }
 
 /* Event Details Page
 --------------------------------*/
 @media (max-width: 768px) {
-    #event-poster .event-name h2 {
-        font-size: 36px;
-    }
-    #event-details {
-        flex-direction: column;
-    }
-    .details-item:not(:last-child) {
-        padding-bottom: 30px;
-    }
+  #event-poster .event-name h2 {
+    font-size: 36px;
+  }
+  #event-details {
+    flex-direction: column;
+  }
+  .details-item:not(:last-child) {
+    padding-bottom: 30px;
+  }
 }
 
 /* All Events page */
 @media (max-width: 720px) {
-    .events {
-        max-width: 650px;
-        flex-direction: column;
-    }
-  
-    .product-img img {
-        border-radius: 0;
-    }
-  
-    .product-desc {
-        padding-bottom: 30px;
-    }
+  .events {
+    max-width: 650px;
+    flex-direction: column;
   }
+
+  .product-img img {
+    border-radius: 0;
+  }
+
+  .product-desc {
+    padding-bottom: 30px;
+  }
+}

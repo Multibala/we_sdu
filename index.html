@@ -4,152 +4,224 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css" >
-    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/mobile.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
     <title>Document</title>
-    <script src="https://kit.fontawesome.com/498ec9eae7.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <!-- HEADER -->
-    <header class="header">
-      <div class="container header__container">
-        <a href="#" class="header__logo">
-          <img src="./images/sdu_logo.png" alt="logo" />
-        </a>
-        <nav class="header__menu">
-          <a href="index.html" class="header__menu-link">Menu</a>
-          <a href="allEvents.html" class="header__menu-link">Events</a>
-        </nav>
-      </div>
-    </header>
-
-    <!-- MAIN-BLOCK -->
-    <div class="main">
-      <div class="main__background"></div>
-      <div class="container main__container">
-        <div class="main__content">
-          <h1 class="main__title">Social Life of E&NS Faculty</h1>
-          <p class="main__text">To make your student life more saturated</p>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="#"
+          ><h1><strong>WE.</strong></h1></a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Main</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Events</a>
+            </li>
+          </ul>
         </div>
       </div>
-    </div>
+    </nav>
+    <!-- End Navbar -->
 
-    <!-- ABOUT-US -->
-    <div class="about container">
-      <div class="about__block">
-        <div class="about__img">
+    <!-- Hero Carousel -->
+    <div
+      id="carouselExampleIndicators"
+      class="carousel slide mb-5"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <h1>Social Life of Engineering Faculty</h1>
           <img
-            src="https://img.freepik.com/free-vector/contact-us-concept-landing-page_52683-12859.jpg?w=2000"
-            alt="about"
+            src="https://alumniyat.com/wp-content/uploads/2020/07/student-life.jpg"
+            class="d-block w-100"
+            alt="..."
           />
         </div>
-        <div class="about__us">
-          <h2 class="about__title title">About Us</h2>
-          <p class="about__text text">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia
-            soluta, sint eveniet ipsum ullam pariatur, delectus voluptatibus
-            quam illo iure aliquid omnis doloribus sunt qui saepe provident
-            dolorum? Eligendi, architecto.
-          </p>
+        <div class="carousel-item">
+          <h1>We are here</h1>
+          <img
+            src="https://estudiar.vamtam.com/wp-content/uploads/2020/12/iStock-1210745478-conflicted-scaled.jpg"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+        <div class="carousel-item">
+          <h1>to make your student life more saturated</h1>
+          <img
+            src="https://image.cnbcfm.com/api/v1/image/105922963-1558366857181astudentwatches.jpg?v=1559135880"
+            class="d-block w-100"
+            alt="..."
+          />
         </div>
       </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
+    <!-- End Hero Carousel -->
 
-    <!-- UPCOMING EVENTS -->
-    <div class="upcoming container">
-      <h2 class="title">Upcoming events</h2>
-      <div class="row"> 
-        <!-- PORTFOLIO IMAGE 1 -->
-        <div class="col-md-4 ">
-          <div class="grid overlay">
-            <figure> <img class="img-responsive" src="images/main-photo.jpg" alt="">
-              <figcaption>
-                <h5>Blind pair</h5>
-                <a data-toggle="modal" href="eventDetails.html" class="btn btn-default">More Details</a> </figcaption>
-            </figure>
+    <!-- About Us -->
+    <section id="about">
+      <div class="container py-5" data-aos="fade-up">
+        <div class="row">
+          <div class="col-lg-6 about-img">
+            <img
+              src="https://img.freepik.com/free-photo/successful-happy-business-team_53876-74892.jpg?w=2000"
+              class="d-block w-100"
+              alt=""
+            />
           </div>
-        </div> 
-        
-        <!-- PORTFOLIO IMAGE 2 -->
-        <div class="col-md-4">
-          <div class="grid overlay">
-            <figure> <img class="img-responsive" src="images/main-photo.jpg" alt="">
-              <figcaption>
-                <h5>Blind pair</h5>
-                <a data-toggle="modal" href="eventDetails.html" class="btn btn-default">More Details</a> </figcaption>
-            </figure>
-          </div>
-        </div>
-        
-        <!-- PORTFOLIO IMAGE 3 -->
-        <div class="col-md-4">
-          <div class="grid overlay">
-            <figure> <img class="img-responsive" src="images/main-photo.jpg" alt="">
-              <figcaption>
-                <h5>Blind pair</h5>
-                <a data-toggle="modal" href="eventDetails.html" class="btn btn-default">More Details</a> </figcaption>
-            </figure>
+          <div class="col-lg-6 content">
+            <h2><strong>About us</strong></h2>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos
+              natus enim corrupti et dolorum magnam iste molestiae architecto,
+              tenetur delectus sint vel nemo eius impedit adipisci deserunt
+              dolore sed quaerat! <br />
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem
+              voluptatem veritatis ducimus placeat enim, exercitationem
+              repellendus libero! Modi explicabo nisi ullam. Quo tempora
+              officiis qui amet asperiores iste cupiditate repellendus.
+            </p>
           </div>
         </div>
       </div>
-      
-      <!-- PORTFOLIO IMAGE 4 -->
-      <div class="row">
-        <div class="col-md-4 ">
-          <div class="grid overlay">
-            <figure> <img class="img-responsive" src="images/main-photo.jpg" alt="">
-              <figcaption>
-                <h5>Blind pair</h5>
-                <a data-toggle="modal" href="eventDetails.html" class="btn btn-default">More Details</a> </figcaption>
-            </figure>
-          </div>
-        </div>
-        
-        <!-- PORTFOLIO IMAGE 5 -->
-        <div class="col-md-4">
-          <div class="grid overlay">
-            <figure> <img class="img-responsive" src="images/main-photo.jpg" alt="">
-              <figcaption>
-                <h5>Blind pair</h5>
-                <a data-toggle="modal" href="eventDetails.html" class="btn btn-default">More Details</a> </figcaption>
-            </figure>
-          </div>
-        </div>
-        
-        <!-- PORTFOLIO IMAGE 6 -->
-        <div class="col-md-4">
-          <div class="grid overlay">
-            <figure> <img class="img-responsive" src="images/main-photo.jpg" alt="">
-              <figcaption>
-                <h5>Blind pair</h5>
-                <a data-toggle="modal" href="eventDetails.html" class="btn btn-default">More Details</a> </figcaption>
-            </figure>
-          </div>
-        </div>
-      </div>
-      <div class="upcoming__all">
-        <a href="allEvents.html" class="upcoming__btn btn">All events</a>
-      </div>
-    </div>
+    </section>
+    <!-- End About Us -->
 
-    
-    <!-- OUR TEAM -->
+    <!-- Upcoming Events -->
+    <section id="upcoming-events">
+      <div class="container py-5">
+        <h2><strong>Upcoming events</strong></h2>
+        <div class="row pt-3 g-3">
+          <div class="col-lg-6">
+            <div class="event-card">
+              <div class="event-card-item">
+                <h2>Welcome Party</h2>
+                <button type="button" class="btn btn-light">
+                  Show Details
+                </button>
+              </div>
+              <img src="images/party.jpg" class="d-block w-100" alt="" />
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="event-card">
+              <div class="event-card-item">
+                <h2>Welcome Party</h2>
+                <button type="button" class="btn btn-light">
+                  Show Details
+                </button>
+              </div>
+              <img src="images/party.jpg" class="d-block w-100" alt="" />
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="event-card">
+              <div class="event-card-item">
+                <h2>Welcome Party</h2>
+                <button type="button" class="btn btn-light">
+                  Show Details
+                </button>
+              </div>
+              <img src="images/party.jpg" class="d-block w-100" alt="" />
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="event-card">
+              <div class="event-card-item">
+                <h2>Welcome Party</h2>
+                <button type="button" class="btn btn-light">
+                  Show Details
+                </button>
+              </div>
+              <img src="images/party.jpg" class="d-block w-100" alt="" />
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="event-card">
+              <div class="event-card-item">
+                <h2>Welcome Party</h2>
+                <button type="button" class="btn btn-light">
+                  Show Details
+                </button>
+              </div>
+              <img src="images/party.jpg" class="d-block w-100" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Upcoming Events -->
+
+    <!-- Our Team -->
     <section id="team" class="page-section">
-      <div class="container">
-        <div class="section-header">
-          <!-- Heading -->
-          <h2>Our team</h2>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Temporibus, ipsam, corporis ratione quaerat aspernatur vero ex
-            incidunt a in nam veritatis minima quisquam rem nesciunt quibusdam
-            dolorem maxime ullam adipisci.
-          </p>
-        </div>
+      <div class="container py-5">
+        <!-- Heading -->
+        <h2><strong>Management</strong></h2>
         <!-- Team Member's Details -->
-        <div class="team-content">
-          <div class="row">
+          <div class="row team-content pt-3">
             <div class="col-md-3 col-sm-6 col-xs-12">
               <!-- Team Member -->
               <div class="team-member pDark">
@@ -233,56 +305,28 @@
               </div>
             </div>
           </div>
-        </div>
       </div>
+    </section>
 
-      
-    </section>
-    <section id="contact">
-      <div class="container" data-aos="fade-up">
-        <div class="section-header">
-          <h2>Contacts</h2>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab quis
-            dolorem rem quia, voluptatum repellendus deserunt dicta eos
-            voluptas? Dolor cupiditate pariatur quia atque dolores rem
-            temporibus ut rerum nam.
-          </p>
-        </div>
-        <div class="row contact-info">
-          <div class="col-md-4">
-            <div class="contact-address">
-              <i class="fa fa-location-dot"></i>
-              <h3>Address</h3>
-              <address>A108 Adam Street, NY 535022, USA</address>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="contact-phone">
-              <i class="fa-solid fa-phone"></i>
-              <h3>Phone Number</h3>
-              <p><a href="tel:+155895548855">+1 5589 55488 55</a></p>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="contact-email">
-              <i class="fa-solid fa-envelope"></i>
-              <h3>Email</h3>
-              <p><a href="mailto:info@example.com">info@example.com</a></p>
-            </div>
-          </div>
-        </div>
+    <!-- Footer -->
+    <footer class="bg-light text-center">
+      <!-- Copyright -->
+      <div class="text-center p-3">
+        &copy; <strong>SDU</strong> All Rights Reserved
       </div>
-    </section>
-    <!-- End Contact Section -->
-    <!-- ======= Footer ======= -->
-    <footer id="footer">
-      <div class="container">
-        <div class="copyright">
-          &copy; <strong>SDU</strong> All Rights Reserved
-        </div>
-      </div>
+      <!-- Copyright -->
     </footer>
     <!-- End Footer -->
+
+    <script src="js/index.js"></script>
+    <script
+      src="https://kit.fontawesome.com/498ec9eae7.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

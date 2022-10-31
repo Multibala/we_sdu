@@ -15,175 +15,58 @@ h5,
 h6 {
   font-family: "Montserrat", sans-serif;
 }
-/* Sections Header
-  --------------------------------*/
-.section-header {
-  margin-bottom: 30px;
-}
 
-.section-header h2 {
-  color: #082673;
-  text-transform: uppercase;
-  font-weight: 700;
+/* Hero Carousel */
+.carousel-item {
   position: relative;
 }
-.section-header p {
-  padding: 0;
+.carousel-item h1 {
   margin: 0;
-  font-size: 16px;
-}
-
-.title {
-  color: #082673;
-  text-transform: uppercase;
-  font-weight: 700;
-  position: relative;
-}
-.text {
-  font-size: 20px;
-  white-space: pre-line;
-}
-
-/* HEADER */
-.header {
-  width: 100%;
-  padding: 5px 0;
-}
-.header__container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.header__logo img {
-  width: 100px;
-  height: 95px;
-}
-
-.header__menu {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.header__menu-link {
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 19px;
-  color: black;
-  text-decoration: none;
-  margin-right: 55px;
-}
-.header__menu-link:active {
-  color: #082673;
-}
-
-/* MAIN-BLOCK */
-.main {
-  position: relative;
-  width: 100%;
-  height: 450px;
-  background: url("../images/main-photo.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.main__background {
-  width: 100%;
-  height: 100%;
-  background-color: #030c00;
-  opacity: 0.5;
-}
-.main__container {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  display: flex;
-  justify-content: center;
+  text-transform: uppercase;
+  font-weight: 700;
   text-align: center;
-  color: white;
-}
-.main__title {
-  font-size: 60px;
-}
-.main__text {
-  font-size: 24px;
-}
-
-/* ABOUT-US */
-.about {
-  padding: 70px 0;
-}
-.about__block {
-  display: flex;
-  justify-content: space-between;
-}
-.about__img img {
-  width: 500px;
-  height: 300px;
-}
-.about__us {
-  text-align: center;
-}
-
-/* UPCOMING EVENTS */
-.upcoming {
-  padding: 0 0 70px;
-}
-.grid figure {
-	margin: 0;
-	position: relative;
-	border: 1px solid #eee;
-}
-.grid figure img {
-	width: 100%;
-	display: block;
-	position: relative;
-}
-.grid figcaption {
-	position: absolute;
-	top: 0;
-	left: 0;
-	padding: 20px;
-	color: #fff;
-}
-.grid figcaption h5 {
-	margin: 0;
-	padding-top: 0px;
-	padding-left: 20px;
-	padding-bottom: 5px;
-	color: #fff;
-	font-weight: 700;
-	text-align: left;
-	letter-spacing: 1px;
-	font-size:24px;
-}
-
-.overlay figcaption {
-	height: 100%;
-	width: 100%;
-	top: auto;
-	bottom: 0;
-}
-.overlay figcaption a {
-position: absolute;
-bottom: 10px;
-right: 30px;
-background: #9e2629;
-color: #fff;
-border-radius: 0px;
-padding: 6px 15px;
-}
-.upcoming__all {
-  text-align: end;
-}
-.upcoming__btn {
-  background: #082673;
   color: #fff;
-  margin: 15px 0;
+  -webkit-text-stroke: 2px #000;
+}
+.carousel-item img {
+  height: 600px;
+  object-fit: cover;
 }
 
-/* Team
----------------------------------------------------*/
+/* About Us */
+#about .about-img img {
+  height: 300px;
+  object-fit: cover;
+}
+#about content p {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #555;
+}
+
+/* Upcoming Events */
+#upcoming-events .event-card {
+  position: relative;
+}
+#upcoming-events .event-card-item {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+}
+#upcoming-events .event-card img {
+  height: 250px;
+  object-fit: cover;
+}
+
+/* Team */
 .team-member {
   margin-bottom: 15px;
 }
@@ -196,7 +79,7 @@ padding: 6px 15px;
   content: "";
   width: 80px;
   height: 80px;
-  background: #082673;
+  background: #000;
   float: right;
   position: absolute;
   z-index: -1;
@@ -207,7 +90,7 @@ padding: 6px 15px;
   content: "";
   width: 80px;
   height: 80px;
-  background: #082673;
+  background: #000;
   float: right;
   position: absolute;
   z-index: -1;
@@ -245,10 +128,10 @@ padding: 6px 15px;
   padding: 7px 0;
   margin: 2px;
   background: white;
-  color: #9e2629;
+  color: #555;
 }
 .team-socials a:hover {
-  color: #082673;
+  color: #000;
 }
 .team-member {
   padding-top: 5px;
@@ -268,70 +151,6 @@ padding: 6px 15px;
   display: inline-block;
   text-align: center;
   font-size: 18px;
-}
-
-/* Contact Section
---------------------------------*/
-#contact {
-  padding: 50px 0;
-}
-
-#contact .contact-info {
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-#contact .contact-info i {
-  font-size: 48px;
-  display: inline-block;
-  margin-bottom: 10px;
-  color: #9e2629;
-}
-
-#contact .contact-info address,
-#contact .contact-info p {
-  margin-bottom: 0;
-  color: #000;
-}
-
-#contact .contact-info h3 {
-  font-size: 18px;
-  margin-bottom: 15px;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: #999;
-}
-
-#contact .contact-info a {
-  color: #000;
-  text-decoration: none;
-  transition: 0.5s;
-}
-
-#contact .contact-info a:hover {
-  color: #9e2629;
-  outline: none;
-  text-decoration: none;
-}
-
-#contact .contact-address,
-#contact .contact-phone,
-#contact .contact-email {
-  margin-bottom: 20px;
-}
-
-/* Footer
-  --------------------------------------------------------------*/
-#footer {
-  background: #082673;
-  padding: 0 0 30px 0;
-  font-size: 14px;
-}
-
-#footer .copyright {
-  color: #fff;
-  text-align: center;
-  padding-top: 30px;
 }
 
 /* Event Details Page
@@ -413,9 +232,8 @@ padding: 6px 15px;
   transition: all 0.3s ease;
   position: relative;
   display: inline-block;
-   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
-   7px 7px 20px 0px rgba(0,0,0,.1),
-   4px 4px 5px 0px rgba(0,0,0,.1);
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
   outline: none;
 }
 /* 16 */
@@ -432,11 +250,8 @@ padding: 6px 15px;
   left: 0;
   direction: rtl;
   z-index: -1;
-  box-shadow:
-   -7px -7px 20px 0px #fff9,
-   -4px -4px 5px 0px #fff9,
-   7px 7px 20px 0px #0002,
-   4px 4px 5px 0px #0001;
+  box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9,
+    7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
   transition: all 0.3s ease;
 }
 .btn-16:hover {
@@ -484,19 +299,19 @@ padding: 6px 15px;
 }
 .product-text h1,
 .product-price-btn p {
-  font-family: 'Bentham', serif;
+  font-family: "Bentham", serif;
 }
 .product-text h2 {
   font-size: 17px;
   line-height: 25px;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 3px;
   margin-top: 0;
 }
 .product-text p {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: 16px;
   line-height: 24px;
 }
@@ -506,21 +321,21 @@ padding: 6px 15px;
   align-items: center;
 }
 .product-price p {
-  font-family: 'Trocchi', serif;
+  font-family: "Trocchi", serif;
   font-size: 28px;
   margin: 0;
 }
 .product-price button {
   padding: 10px 30px;
   border-radius: 6px;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 16px;
   font-weight: 500;
   text-transform: uppercase;
   background-color: transparent;
   cursor: pointer;
   border: 1px solid #9e2629;
-  transition: .5s;
+  transition: 0.5s;
 }
 .product-price button:hover {
   background-color: #9e2629;
