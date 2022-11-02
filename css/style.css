@@ -155,7 +155,7 @@ h6 {
 
 /* Event Details Page
 --------------------------------*/
-#event-poster {
+.event-poster {
   width: 100%;
   height: 400px;
   position: relative;
@@ -166,7 +166,7 @@ h6 {
   border-radius: 16px;
   margin-top: 50px;
 }
-#event-poster .event-name {
+.event-poster .event-name {
   position: absolute;
   bottom: 0;
   top: 0;
@@ -179,12 +179,12 @@ h6 {
   flex-direction: column;
   text-align: center;
 }
-#event-poster .event-name h2 {
+.event-poster .event-name h2 {
   color: #fff;
   font-size: 64px;
   font-weight: 700;
 }
-#event-details {
+.event-info {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -193,7 +193,7 @@ h6 {
   border-radius: 16px;
   box-shadow: 0 0 0 1px #f2f2f2;
 }
-.details-item {
+.event-details {
   width: 100%;
   padding-right: 20px;
 }
@@ -204,18 +204,18 @@ h6 {
   margin-top: 12px;
   font-size: 1.5rem;
 }
-#event-description {
+.event-description {
   width: 100%;
   margin-top: 50px;
   padding-bottom: 50px;
   line-height: 1.75;
 }
-#event-description h4 {
+.event-description h4 {
   margin-top: 60px;
   margin-bottom: 20px;
   font-size: 1.25em;
 }
-#event-description p {
+.event-description p {
   margin-bottom: 20px;
   color: #777;
   font-size: 1.125em;
@@ -236,108 +236,50 @@ h6 {
     7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
   outline: none;
 }
-/* 16 */
-.btn-16 {
-  border: none;
-  color: #000;
-}
-.btn-16:after {
-  position: absolute;
-  content: "";
-  width: 0;
-  height: 100%;
-  top: 0;
-  left: 0;
-  direction: rtl;
-  z-index: -1;
-  box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9,
-    7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
-  transition: all 0.3s ease;
-}
-.btn-16:hover {
-  color: #000;
-}
-.btn-16:hover:after {
-  left: auto;
-  right: 0;
-  width: 100%;
-}
-.btn-16:active {
-  top: 2px;
-}
 
-/* All Events page */
-.events {
-  padding: 50px 0;
+/* Event Card */
+.card-img {
+ height: 250px;
+ object-fit: cover;
 }
-.events__container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  border-radius: 10px;
-  box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
-  padding: 20px;
-}
-.product-img {
-  width: 327px;
-}
-.product-img img {
-  width: 327px;
-  object-fit: cover;
-  border-radius: 10px 0 0 10px;
-}
-.product-desc {
-  padding-right: 30px;
-  padding-left: 30px;
-  background-color: transparent;
-}
-.product-text h1 {
-  font-size: 34px;
-  line-height: 42px;
-  margin-bottom: 0;
-}
-.product-text h1,
-.product-price-btn p {
-  font-family: "Bentham", serif;
-}
-.product-text h2 {
-  font-size: 17px;
-  line-height: 25px;
-  font-family: "Raleway", sans-serif;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  margin-top: 0;
-}
-.product-text p {
-  font-family: "Playfair Display", serif;
-  font-size: 16px;
-  line-height: 24px;
-}
-.product-price {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.product-price p {
-  font-family: "Trocchi", serif;
-  font-size: 28px;
-  margin: 0;
-}
-.product-price button {
-  padding: 10px 30px;
-  border-radius: 6px;
-  font-family: "Raleway", sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  text-transform: uppercase;
-  background-color: transparent;
-  cursor: pointer;
-  border: 1px solid #9e2629;
-  transition: 0.5s;
-}
-.product-price button:hover {
-  background-color: #9e2629;
+.date-ribbon {
+  position: absolute;
+  top: 0;
+  left: 2em;
+  background: #fe453e;
   color: #fff;
+  padding: 0.5em 1em;
+  text-align: center;
+}
+.date-ribbon::before,
+.date-ribbon::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+}
+.date-ribbon::before {
+  left: 0;
+  border-left: solid 2em #fe453e;
+  border-top: solid 15px #fe453e;
+  border-bottom: solid 15px transparent;
+  border-right: solid 2em transparent;
+}
+.date-ribbon::after {
+  right: 0;
+  border-right: solid 2em #fe453e;
+  border-top: solid 15px #fe453e;
+  border-bottom: solid 15px transparent;
+  border-left: solid 2em transparent;
+}
+.card-text {
+  color: #555;
+}
+.icon {
+  width: 25px;
+  text-align: center;
+}
+.details-button {
+  position: absolute;
+  right: 2em;
+  bottom: 2em;
 }

@@ -3,16 +3,31 @@
   #about .content h2 {
     padding-top: 16px;
   }
-}
-/* Team
----------------------------------------------------*/
-@media (max-width: 768px) {
+  /* Our Team */
   .team-member .member-img img {
     max-width: 100%;
+  }
+  /* Event Card */
+  .details-button {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    margin-top: 16px;
+  }
+  /* Event Details */
+  .event-poster .event-name h2 {
+    font-size: 36px;
+  }
+  .event-info {
+    flex-direction: column;
+  }
+  .event-details:not(:last-child) {
+    padding-bottom: 30px;
   }
 }
 
 @media (max-width: 480px) {
+  /* Our Team */
   .team-socials a {
     background: white;
     padding: 1px 0;
@@ -25,35 +40,5 @@
     display: inline-block;
     text-align: center;
     font-size: 16px;
-  }
-}
-
-/* Event Details Page
---------------------------------*/
-@media (max-width: 768px) {
-  #event-poster .event-name h2 {
-    font-size: 36px;
-  }
-  #event-details {
-    flex-direction: column;
-  }
-  .details-item:not(:last-child) {
-    padding-bottom: 30px;
-  }
-}
-
-/* All Events page */
-@media (max-width: 720px) {
-  .events {
-    max-width: 650px;
-    flex-direction: column;
-  }
-
-  .product-img img {
-    border-radius: 0;
-  }
-
-  .product-desc {
-    padding-bottom: 30px;
   }
 }
