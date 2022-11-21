@@ -51,10 +51,6 @@
       <div class="card mb-3">
         <div class="row">
           <div class="col-lg-4">
-            <div class="date-ribbon">
-              <h5>OCT</h5>
-              <h1>28</h1>
-            </div>
             <img
               src="images/party.jpg"
               class="card-img img-fluid rounded-start w-100"
@@ -104,5 +100,28 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.1.0/papaparse.min.js"></script>
+    <script type="text/javascript">
+      function init() {
+        var public_spreadsheet_url =
+          "https://docs.google.com/spreadsheets/d/e/2PACX-1vRzRQkaWpo9oXopp7egkDudQDRH6c2gxcx4odluhb8CH3nmYdYcyCNPTmFLuskzLUdrXAHbXWvapT0r/pub?output=csv";
+
+        Papa.parse(public_spreadsheet_url, {
+          download: true,
+          header: true,
+          complete: showInfo,
+        });
+      }
+
+      window.addEventListener("DOMContentLoaded", init);
+
+      function showInfo(results) {
+        var data = results.data;
+
+        for (var i = 0; i < data.length; i++) {
+          console.log(data[i].name);
+        }
+      }
+    </script>
   </body>
 </html>
