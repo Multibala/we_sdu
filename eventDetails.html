@@ -11,7 +11,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="css/mobile.css" />
     <title>Event Details</title>
   </head>
   <body>
@@ -50,15 +50,15 @@
     <section class="container">
       <div class="event-poster">
         <div class="event-name">
-          <h2>Welcome Party</h2>
+          <h2 id="name">Welcome Party</h2>
           <button type="button" class="btn btn-light">Register</button>
         </div>
       </div>
-  
+
       <div class="event-info">
         <div class="event-details">
           <h5 class="item-title">When?</h5>
-          <p class="item-text">1 December</p>
+          <p class="item-text" id="date">1 December</p>
         </div>
         <div class="event-details">
           <h5 class="item-title">What time?</h5>
@@ -69,22 +69,22 @@
           <p class="item-text">Red Hall</p>
         </div>
       </div>
-  
+
       <div class="event-description">
         <h4>Event Description</h4>
-        <p>
+        <p id="description">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, quaerat
           neque harum nulla quam voluptatum aperiam repellat est eum atque
           explicabo provident non aspernatur voluptatem soluta! Dicta illum
           officiis corporis?<br />
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente,
-          consectetur. Assumenda explicabo ut architecto unde voluptatem, et illum
-          nisi magni, voluptates, provident deserunt inventore saepe quaerat error
-          beatae laboriosam ipsam.<br />
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae aut cum
-          deleniti excepturi laudantium vel, consectetur in quos explicabo, ea
-          distinctio, eveniet dignissimos assumenda ipsa eius modi vitae mollitia
-          quae!
+          consectetur. Assumenda explicabo ut architecto unde voluptatem, et
+          illum nisi magni, voluptates, provident deserunt inventore saepe
+          quaerat error beatae laboriosam ipsam.<br />
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae aut
+          cum deleniti excepturi laudantium vel, consectetur in quos explicabo,
+          ea distinctio, eveniet dignissimos assumenda ipsa eius modi vitae
+          mollitia quae!
         </p>
       </div>
     </section>
@@ -109,5 +109,15 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <script>
+      window.onload = function () {
+        const eventDetails = JSON.parse(localStorage.getItem("eventDetails"));
+
+        document.getElementById("name").innerHTML = eventDetails.name;
+        document.getElementById("description").innerHTML =
+          eventDetails.description;
+        document.getElementById("date").innerHTML = eventDetails.date;
+      };
+    </script>
   </body>
 </html>

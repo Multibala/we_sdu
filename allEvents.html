@@ -47,38 +47,7 @@
     <!-- End Navbar -->
 
     <!-- Event Card -->
-    <div class="container my-5">
-      <div class="card mb-3">
-        <div class="row">
-          <div class="col-lg-4">
-            <img
-              src="images/party.jpg"
-              class="card-img img-fluid rounded-start w-100"
-              alt="..."
-            />
-          </div>
-          <div class="col-lg-8">
-            <div class="card-body">
-              <h5 class="card-title"><strong>Event name</strong></h5>
-              <p class="card-text">
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </p>
-              <div class="main-info">
-                <i class="fa-regular fa-calendar icon"></i>
-                October | 8pm - 10pm <br />
-                <i class="fa-solid fa-location-dot icon"></i>
-                Red Hall
-              </div>
-              <button onclick="window.location.href='eventDetails.html'" type="button" class="btn btn-primary details-button">
-                View Details
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div id="events" class="container my-5"></div>
     <!-- End Event Card -->
 
     <!-- Footer -->
@@ -100,8 +69,13 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.1.0/papaparse.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.1.0/papaparse.min.js"
+    ></script>
     <script type="text/javascript">
+      let data = [];
+
       function init() {
         var public_spreadsheet_url =
           "https://docs.google.com/spreadsheets/d/e/2PACX-1vRzRQkaWpo9oXopp7egkDudQDRH6c2gxcx4odluhb8CH3nmYdYcyCNPTmFLuskzLUdrXAHbXWvapT0r/pub?output=csv";
@@ -116,11 +90,52 @@
       window.addEventListener("DOMContentLoaded", init);
 
       function showInfo(results) {
-        var data = results.data;
+        data = results.data;
 
         for (var i = 0; i < data.length; i++) {
-          console.log(data[i].name);
+          document.getElementById("events").innerHTML +=
+            '<div class="card mb-3">' +
+            '<div class="row">' +
+            '<div class="col-lg-4">' +
+            '<img src="images/party.jpg" class="card-img img-fluid rounded-start w-100" alt="..."/>' +
+            "</div>" +
+            '<div  class="col-lg-8">' +
+            '<div class="card-body">' +
+            '<h5 class="card-title"><strong id="name' +
+            i +
+            '">' +
+            data[i].name +
+            "</strong></h5>" +
+            '<p class="card-text" id="description' +
+            i +
+            '">' +
+            data[i].description +
+            "</p>" +
+            '<div class="main-info" >' +
+            '<i class="fa-regular fa-calendar icon"></i><span id="date' +
+            i +
+            '">' +
+            data[i].date +
+            "</span> <br />" +
+            '<i class="fa-solid fa-location-dot icon"></i><span id="numberOfPeople' +
+            i +
+            ' ">' +
+            data[i].numberOfPeople +
+            "</span>" +
+            "</div>" +
+            '<button onclick="testJS(' +
+            i +
+            ')" type="button" class="btn btn-primary details-button"> View Details </button>' +
+            "</div>" +
+            "</div>" +
+            "</div>" +
+            "</div>";
         }
+      }
+
+      function testJS(index) {
+        localStorage.setItem("eventDetails", JSON.stringify(data[index]));
+        window.location.href = "eventDetails.html";
       }
     </script>
   </body>
